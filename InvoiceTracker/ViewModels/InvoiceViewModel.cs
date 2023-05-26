@@ -90,6 +90,11 @@ namespace InvoiceTracker.ViewModels
             }
         }
 
+        public decimal GrossTotal => invoiceItems.Any() ? invoiceItems.Sum(x => x.GrossSubtotal) : 0;
+        public string GrossTotalString => $"{Math.Round(GrossTotal, 2):0.00} {currency}";
+        public decimal NetTotal => invoiceItems.Any() ? invoiceItems.Sum(x => x.NetSubtotal) : 0;
+        public string NetTotalString => $"{Math.Round(NetTotal, 2):0.00} {currency}";
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected virtual void OnPropertyChanged([CallerMemberName] string? propertyName = null)

@@ -88,11 +88,11 @@
             label4 = new Label();
             panel3 = new Panel();
             panel1 = new Panel();
+            grossTotalAmountLabel = new Label();
+            grossTotalLabel = new Label();
             netTotalAmountLabel = new Label();
             netTotalLabel = new Label();
             saveButton = new Button();
-            grossTotalAmountLabel = new Label();
-            grossTotalLabel = new Label();
             addInvoiceTabDescription.SuspendLayout();
             addInvoiceTabData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)itemVatPNumericUpDown).BeginInit();
@@ -678,11 +678,31 @@
             panel1.Size = new Size(734, 48);
             panel1.TabIndex = 30;
             // 
+            // grossTotalAmountLabel
+            // 
+            grossTotalAmountLabel.AutoSize = true;
+            grossTotalAmountLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            grossTotalAmountLabel.Location = new Point(321, 18);
+            grossTotalAmountLabel.Name = "grossTotalAmountLabel";
+            grossTotalAmountLabel.Size = new Size(14, 15);
+            grossTotalAmountLabel.TabIndex = 6;
+            grossTotalAmountLabel.Text = "0";
+            // 
+            // grossTotalLabel
+            // 
+            grossTotalLabel.AutoSize = true;
+            grossTotalLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            grossTotalLabel.Location = new Point(252, 18);
+            grossTotalLabel.Name = "grossTotalLabel";
+            grossTotalLabel.Size = new Size(67, 15);
+            grossTotalLabel.TabIndex = 5;
+            grossTotalLabel.Text = "Gross Total:";
+            // 
             // netTotalAmountLabel
             // 
             netTotalAmountLabel.AutoSize = true;
             netTotalAmountLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            netTotalAmountLabel.Location = new Point(101, 18);
+            netTotalAmountLabel.Location = new Point(72, 18);
             netTotalAmountLabel.Name = "netTotalAmountLabel";
             netTotalAmountLabel.Size = new Size(14, 15);
             netTotalAmountLabel.TabIndex = 4;
@@ -691,10 +711,10 @@
             // netTotalLabel
             // 
             netTotalLabel.AutoSize = true;
-            netTotalLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            netTotalLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             netTotalLabel.Location = new Point(12, 18);
             netTotalLabel.Name = "netTotalLabel";
-            netTotalLabel.Size = new Size(61, 15);
+            netTotalLabel.Size = new Size(57, 15);
             netTotalLabel.TabIndex = 3;
             netTotalLabel.Text = "Net Total:";
             // 
@@ -707,26 +727,6 @@
             saveButton.Text = "CREATE INVOICE";
             saveButton.UseVisualStyleBackColor = true;
             saveButton.Click += createInvoiceButton_Click;
-            // 
-            // grossTotalAmountLabel
-            // 
-            grossTotalAmountLabel.AutoSize = true;
-            grossTotalAmountLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            grossTotalAmountLabel.Location = new Point(341, 18);
-            grossTotalAmountLabel.Name = "grossTotalAmountLabel";
-            grossTotalAmountLabel.Size = new Size(14, 15);
-            grossTotalAmountLabel.TabIndex = 6;
-            grossTotalAmountLabel.Text = "0";
-            // 
-            // grossTotalLabel
-            // 
-            grossTotalLabel.AutoSize = true;
-            grossTotalLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            grossTotalLabel.Location = new Point(252, 18);
-            grossTotalLabel.Name = "grossTotalLabel";
-            grossTotalLabel.Size = new Size(71, 15);
-            grossTotalLabel.TabIndex = 5;
-            grossTotalLabel.Text = "Gross Total:";
             // 
             // InvoicesAddForm
             // 

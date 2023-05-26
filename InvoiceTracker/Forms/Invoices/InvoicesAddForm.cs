@@ -41,6 +41,7 @@ namespace InvoiceTracker.Forms.Invoices
 
             InitializeControls();
             InitializeGrid();
+            UpdateTotals();
         }
 
         private void InitializeControls()
@@ -151,7 +152,16 @@ namespace InvoiceTracker.Forms.Invoices
                 invoiceItemsGridView.Refresh();
             }
 
+            UpdateTotals();
+
             CloseEditFormForInvoiceItem();
+        }
+
+        private void UpdateTotals()
+        {
+            _invoiceViewModel.Currency = "PLN";
+            grossTotalAmountLabel.Text = _invoiceViewModel.GrossTotalString;
+            netTotalAmountLabel.Text = _invoiceViewModel.NetTotalString;
         }
 
         private void AddNewInvoiceItem(InvoiceItemViewModel item)
@@ -241,6 +251,7 @@ namespace InvoiceTracker.Forms.Invoices
 
             _invoiceViewModel.InvoiceItems.RemoveAt(indexToRemove);
             UpdateOrderNoInAllItems();
+            UpdateTotals();
         }
 
         private void UpdateOrderNoInAllItems()
