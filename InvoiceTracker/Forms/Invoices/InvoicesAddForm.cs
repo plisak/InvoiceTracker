@@ -85,7 +85,7 @@ namespace InvoiceTracker.Forms.Invoices
 
             DataGridViewButtonColumn deleteButtonColumn = new DataGridViewButtonColumn();
             deleteButtonColumn.Name = string.Empty;
-            deleteButtonColumn.Text = "Delete";
+            deleteButtonColumn.Text = "Delete";  
             deleteButtonColumn.UseColumnTextForButtonValue = true;
             invoiceItemsGridView.Columns.Insert(DeleteButtonColumnIndex, deleteButtonColumn);
             invoiceItemsGridView.Columns[DeleteButtonColumnIndex].Width = 50;

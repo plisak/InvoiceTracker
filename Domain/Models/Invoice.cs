@@ -17,6 +17,5 @@ namespace Domain.Models
         public Company Customer { get; set; }
         public Company Vendor { get; set; }
         public List<InvoiceItem> InvoiceItems { get; set; }
-        // Other invoice related properties
     }
 }
